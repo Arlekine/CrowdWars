@@ -84,18 +84,24 @@ public class Soldier : MonoBehaviour
                 _animator.SetBool("IsAttacking", true);
                 _charControl.SetRotation = false;
 
-                if (Time.time >= _nextAttackTime)
-                {
-                    _nextAttackTime = Time.time + _attackPause;
-                    Shoot();
-                }
-
-
                 if ((transform.forward - (distanceToTarget).normalized).magnitude > _lerpStep)
+                {
                     transform.forward =
                         Vector3.Lerp(transform.forward, (distanceToTarget).normalized, _lerpStep);
+                }
                 else
+                {
                     transform.forward = (distanceToTarget).normalized;
+                }
+
+                if ((transform.forward - (distanceToTarget).normalized).magnitude < _lerpStep * 2)
+                {
+                    if (Time.time >= _nextAttackTime)
+                    {
+                        _nextAttackTime = Time.time + _attackPause;
+                        Shoot();
+                    }
+                }
 
 
                 transform.rotation =

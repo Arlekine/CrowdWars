@@ -5,9 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoldiersIncreaser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoldiersIncreaser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SquadFollower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SquadFollower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +21,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombie.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/19391519-2608-4240-8FF9-93819E8AFDF3/86/3abd0658/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoldiersIncreaserAdding.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Soldier.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SquadFollower.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shaker.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -50,6 +49,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SquadFollower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoldiersIncreaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shaker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" />
       </list>
     </option>
   </component>
@@ -99,7 +99,7 @@
       <updated>1634151732846</updated>
       <workItem from="1634151736173" duration="480000" />
       <workItem from="1634401014027" duration="16008000" />
-      <workItem from="1634919056141" duration="22556000" />
+      <workItem from="1634919056141" duration="23562000" />
     </task>
     <servers />
   </component>

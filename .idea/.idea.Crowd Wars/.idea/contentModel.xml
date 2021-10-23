@@ -147,6 +147,25 @@
           <e p="Zombie.cs" t="Include" />
           <e p="ZombieAttackTrigger.cs" t="Include" />
         </e>
+        <e p="Simple Toon" t="Include">
+          <e p="Shaders" t="Include">
+            <e p="STCore.cginc" t="Include" />
+            <e p="STDefault.shader" t="Include" />
+            <e p="STFunctions.cginc" t="Include" />
+            <e p="STOutline.shader" t="Include" />
+            <e p="STTransparent.shader" t="Include" />
+          </e>
+        </e>
+        <e p="VerticalFog" t="Include">
+          <e p="Readme.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="DepthTexture.cs" t="Include" />
+          </e>
+          <e p="Shader" t="Include">
+            <e p="SimpleVerticalFog.shader" t="Include" />
+            <e p="VerticalFogWithTexture.shader" t="Include" />
+          </e>
+        </e>
       </e>
       <e p="Crowd Wars.sln" t="IncludeFlat" />
       <e p="LeanCommon.csproj" t="IncludeRecursive" />
