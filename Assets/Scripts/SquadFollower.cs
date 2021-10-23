@@ -6,7 +6,7 @@
 
        [SerializeField] private LevelEndTrigger _LevelEndTrigger;
        [SerializeField] private SoldiersSquad _squad;
-       [SerializeField] private Camera _camera;
+       [SerializeField] private Transform _camera;
        [SerializeField] private float _cameraSpeed;
        [Range(10, 100)] [SerializeField] private float _distanceA;
        [Range(10, 100)] [SerializeField] private float _distanceB;
@@ -34,7 +34,7 @@
                if (difference.magnitude <= _cameraSpeed * Time.deltaTime)
                    _camera.transform.position = _targetPos;
                else
-                   _camera.transform.position += difference.normalized * (_cameraSpeed * Time.deltaTime);
+                   _camera.transform.position = Vector3.Lerp(_camera.transform.position, _targetPos, (_cameraSpeed * Time.deltaTime));
            }
        }
    }

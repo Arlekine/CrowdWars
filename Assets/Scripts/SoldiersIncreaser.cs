@@ -23,6 +23,7 @@ public abstract class SoldiersIncreaser : MonoBehaviour
             IncreaseSquad(soldier.Squad);
             gameObject.SetActive(false);
             _brotherGate.DisableGate();
+            Shaker.Inst.Shake();
         }
     }
 
