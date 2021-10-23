@@ -13,15 +13,22 @@
 
        private Vector3 _positionOffsetDirection;
        private Vector3 _targetPos;
-   
-       private void Start()
+
+
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+        QualitySettings.vSyncCount = 0;
+    }
+
+    private void Start()
        {
            _positionOffsetDirection = _camera.transform.position - _squad.SquadCenter;
            _positionOffsetDirection = _positionOffsetDirection.normalized;
            _LevelEndTrigger.onTriggered += () => { IsFinal = true; };
        }
    
-       private void Update()
+       private void FixedUpdate()
        {
            var squadCenter = _squad.SquadCenter;
            float distance = Mathf.Lerp(_distanceA, _distanceB, IsFinal ? 1f : ((float)_squad.SquadCount - 30f)/ 330f);

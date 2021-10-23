@@ -6,7 +6,13 @@ public class Bullet : MonoBehaviour
     
     private Vector3 _currentDirection;
     private float _deathTime;
-    
+
+
+    private void Start()
+    {
+        Destroy(gameObject, 1.5f);
+    }
+
     public void SetDirection(Vector3 direction)
     {
         _currentDirection = direction;

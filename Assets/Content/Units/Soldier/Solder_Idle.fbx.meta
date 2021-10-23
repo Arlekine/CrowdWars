@@ -1,12 +1,32 @@
 fileFormatVersion: 2
 guid: 4daa817d3d6abc443b7689d906482a96
 ModelImporter:
-  serializedVersion: 20200
+  serializedVersion: 20101
   internalIDToNameTable:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: 69d39e7ddfdb846e1acb82af2b378a41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color1
+    second: {fileID: 2100000, guid: ab934c3da89d2427f88ae5cfc5237393, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color_3
+    second: {fileID: 2100000, guid: b2836bd60a8a84c25be5b1efca3e060c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skin1
+    second: {fileID: 2100000, guid: bd05bfa0e74e94002b6ba925d99bcdf3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -127,7 +147,6 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 1
-  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

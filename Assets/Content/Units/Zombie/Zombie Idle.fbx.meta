@@ -1,12 +1,17 @@
 fileFormatVersion: 2
 guid: 01ce7c64a3bb5d04c91f25bd83b26318
 ModelImporter:
-  serializedVersion: 20200
+  serializedVersion: 20101
   internalIDToNameTable:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn1
+    second: {fileID: 2100000, guid: 276df6e117fe141cd8c2f7708b5bffd8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -98,7 +103,6 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 1
-  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

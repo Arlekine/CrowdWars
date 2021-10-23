@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _SimpleCharControl: {fileID: 5779909641228855777}
   _animator: {fileID: 5779909642923607036}
+  _enemyDetectionRadious: 10
   _damage: 12
   _attackDistance: 4
   _startHealth: 200
@@ -1396,7 +1397,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6271573414225017425, guid: 01ce7c64a3bb5d04c91f25bd83b26318, type: 3}
+  - {fileID: 2100000, guid: 276df6e117fe141cd8c2f7708b5bffd8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
