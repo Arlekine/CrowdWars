@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\UnitySVN\Crowd Wars" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Epic Toon FX" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="ETFXButtonScript.cs" t="Include" />
+              <e p="ETFXFireProjectile.cs" t="Include" />
+              <e p="ETFXLoopScript.cs" t="Include" />
+              <e p="ETFXMouseOrbit.cs" t="Include" />
+              <e p="ETFXProjectileScript.cs" t="Include" />
+              <e p="ETFXSceneManager.cs" t="Include" />
+              <e p="ETFXTarget.cs" t="Include" />
+              <e p="VFX Library" t="Include">
+                <e p="ParticleEffectsLibrary.cs" t="Include" />
+                <e p="PEButtonScript.cs" t="Include" />
+                <e p="UICanvasManager.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="Combat" t="Include">
+              <e p="Combat FX.txt" t="Include" />
+            </e>
+            <e p="Environment" t="Include">
+              <e p="Environment FX.txt" t="Include" />
+            </e>
+            <e p="Interactive" t="Include">
+              <e p="Interactive FX.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="ETFXLightFade.cs" t="Include" />
+            <e p="ETFXPitchRandomizer.cs" t="Include" />
+            <e p="ETFXRotation.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="ImportedAssets" t="Include">
+            <e p="Lean" t="Include">
+              <e p="Common" t="Include">
+                <e p="Documentation" t="Include">
+                  <e p="LeanGuide.cs" t="Include" />
+                </e>
+                <e p="Examples" t="Include">
+                  <e p="Fonts" t="Include">
+                    <e p="OFL.txt" t="Include" />
+                  </e>
+                  <e p="Scripts" t="Include">
+                    <e p="LeanLinkTo.cs" t="Include" />
+                    <e p="LeanUpgradeEventSystem.cs" t="Include" />
+                  </e>
+                  <e p="Shaders" t="Include">
+                    <e p="Alpha.shader" t="Include" />
+                    <e p="Object.shader" t="Include" />
+                    <e p="Skybox.shader" t="Include" />
+                  </e>
+                </e>
+                <e p="LeanCommon.asmdef" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="LeanHelper.cs" t="Include" />
+                  <e p="LeanInput.cs" t="Include" />
+                  <e p="LeanInspector.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Touch" t="Include">
+                <e p="Examples" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="LeanDestroy.cs" t="Include" />
+                    <e p="LeanDragTrail.cs" t="Include" />
+                    <e p="LeanInfoText.cs" t="Include" />
+                    <e p="LeanPulseScale.cs" t="Include" />
+                    <e p="LeanSpawn.cs" t="Include" />
+                    <e p="LeanTouchEvents.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Extras" t="Include">
+                  <e p="LeanDragCamera.cs" t="Include" />
+                  <e p="LeanDragTranslate.cs" t="Include" />
+                  <e p="LeanFingerData.cs" t="Include" />
+                  <e p="LeanFingerDown.cs" t="Include" />
+                  <e p="LeanFingerFilter.cs" t="Include" />
+                  <e p="LeanFingerOld.cs" t="Include" />
+                  <e p="LeanFingerSwipe.cs" t="Include" />
+                  <e p="LeanFingerTap.cs" t="Include" />
+                  <e p="LeanFingerUp.cs" t="Include" />
+                  <e p="LeanFingerUpdate.cs" t="Include" />
+                  <e p="LeanPath.cs" t="Include" />
+                  <e p="LeanPinchScale.cs" t="Include" />
+                  <e p="LeanPlane.cs" t="Include" />
+                  <e p="LeanRoll.cs" t="Include" />
+                  <e p="LeanScreenDepth.cs" t="Include" />
+                  <e p="LeanSelect.cs" t="Include" />
+                  <e p="LeanSelectable.cs" t="Include" />
+                  <e p="LeanSelectableBehaviour.cs" t="Include" />
+                  <e p="LeanSelectableGraphicColor.cs" t="Include" />
+                  <e p="LeanSelectableRendererColor.cs" t="Include" />
+                  <e p="LeanSelectableSpriteRendererColor.cs" t="Include" />
+                  <e p="LeanSelectBase.cs" t="Include" />
+                  <e p="LeanSwipeBase.cs" t="Include" />
+                  <e p="LeanTwistRotate.cs" t="Include" />
+                  <e p="LeanTwistRotateAxis.cs" t="Include" />
+                </e>
+                <e p="LeanTouch.asmdef" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="LeanFinger.cs" t="Include" />
+                  <e p="LeanGesture.cs" t="Include" />
+                  <e p="LeanSnapshot.cs" t="Include" />
+                  <e p="LeanTouch.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="BackBlocker.cs" t="Include" />
+          <e p="Bullet.cs" t="Include" />
+          <e p="GameController.cs" t="Include" />
+          <e p="LevelEndBattle.cs" t="Include" />
+          <e p="LevelEndTrigger.cs" t="Include" />
+          <e p="SimpleCharControl.cs" t="Include" />
+          <e p="Soldier.cs" t="Include" />
+          <e p="SoldiersIncreaser.cs" t="Include" />
+          <e p="SoldiersIncreaserAdding.cs" t="Include" />
+          <e p="SoldiersIncreaserDividing.cs" t="Include" />
+          <e p="SoldiersIncreaserMultiplying.cs" t="Include" />
+          <e p="SoldiersSquad.cs" t="Include" />
+          <e p="SquadFollower.cs" t="Include" />
+          <e p="Zombie.cs" t="Include" />
+          <e p="ZombieAttackTrigger.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Crowd Wars.sln" t="IncludeFlat" />
+      <e p="LeanCommon.csproj" t="IncludeRecursive" />
+      <e p="LeanTouch.csproj" t="IncludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\KK\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\KK\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Crowd Wars.1553499887.00" t="ExcludeRecursive" />
+  </component>
+</project>
