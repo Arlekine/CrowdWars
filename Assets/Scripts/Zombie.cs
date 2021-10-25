@@ -18,7 +18,8 @@ public class Zombie : MonoBehaviour
     [SerializeField] private Collider _collider;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private LayerMask _targetLayer;
-    
+    [SerializeField] private Color _deathColor;
+    [SerializeField] private SkinnedMeshRenderer _skinnedMesh;    
     private int _health;
     
     private Soldier _currentTarget;
@@ -112,6 +113,8 @@ public class Zombie : MonoBehaviour
 
     private void Death()
     {
+        _skinnedMesh.material.color = _deathColor;
+
         _animator.SetTrigger("Death");
         _SimpleCharControl._isDead = true;
         _collider.enabled = false;
@@ -119,4 +122,6 @@ public class Zombie : MonoBehaviour
         onDead?.Invoke(this);
         Destroy(this);
     }
+
+
 }

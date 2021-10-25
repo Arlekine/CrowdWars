@@ -151,6 +151,8 @@ MonoBehaviour:
   _targetLayer:
     serializedVersion: 2
     m_Bits: 128
+  _deathColor: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
+  _skinnedMesh: {fileID: 5779909643149861555}
 --- !u!136 &8205561921562293584
 CapsuleCollider:
   m_ObjectHideFlags: 0

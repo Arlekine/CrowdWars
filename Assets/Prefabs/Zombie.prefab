@@ -764,12 +764,14 @@ MonoBehaviour:
   _enemyDetectionRadious: 10
   _damage: 6
   _attackDistance: 2
-  _startHealth: 20
+  _startHealth: 10
   _collider: {fileID: 1129757422291637718}
   _rigidbody: {fileID: 2518200036101629922}
   _targetLayer:
     serializedVersion: 2
     m_Bits: 128
+  _deathColor: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
+  _skinnedMesh: {fileID: 2618162628402953019}
 --- !u!136 &1129757422291637718
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -23,15 +23,19 @@ public class Bullet : MonoBehaviour
     {
         transform.Translate(_currentDirection * 30f * Time.deltaTime, Space.Self);
 
-        if (Time.time > _deathTime)
-        {
-            Destroy(gameObject);
-        }
+        //if (Time.time > _deathTime)
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 
     public void OnTriggerEnter(Collider other)
     {
         var zombie = other.GetComponent<Zombie>();
+
+        if (other.tag == "Border")
+            Destroy(gameObject);
+
         if (zombie != null)
         {
             zombie.Hit(2);

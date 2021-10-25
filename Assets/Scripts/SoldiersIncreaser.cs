@@ -17,6 +17,10 @@ public abstract class SoldiersIncreaser : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         var soldier = other.GetComponent<Soldier>();
+        var bullet = other.GetComponent<Bullet>();
+
+        if (bullet != null)
+            Destroy(other.gameObject);
 
         if (soldier != null)
         {
