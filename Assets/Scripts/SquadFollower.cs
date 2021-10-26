@@ -10,6 +10,10 @@
        [SerializeField] private float _cameraSpeed;
        [Range(10, 100)] [SerializeField] private float _distanceA;
        [Range(10, 100)] [SerializeField] private float _distanceB;
+       
+       [Space] 
+       [SerializeField] private Vector3 _lastArevaOffset;
+       [SerializeField] private Vector3 _lastArenaRotation;
 
        private Vector3 _positionOffsetDirection;
        private Vector3 _targetPos;
@@ -35,7 +39,17 @@
 
            if (squadCenter != Vector3.negativeInfinity)
            {
-               _targetPos = _squad.SquadCenter + _positionOffsetDirection * distance;
+               _targetPos = _squad.SquadCenter + ( !IsFinal ? _positionOffsetDirection : _lastArevaOffset.normalized) * distance;
+
+               if (IsFinal)
+               {
+                   var rotDifference = _lastArenaRotation - _camera.transform.localEulerAngles;
+                   if (rotDifference.magnitude <= _cameraSpeed * Time.deltaTime)
+                       _camera.transform.position = _targetPos;
+                   else
+                       _camera.transform.localEulerAngles = Vector3.Lerp(_camera.transform.localEulerAngles, _lastArenaRotation, (_cameraSpeed * Time.deltaTime));
+               }
+
                var difference = _targetPos - _camera.transform.position;
 
                if (difference.magnitude <= _cameraSpeed * Time.deltaTime)

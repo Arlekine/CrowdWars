@@ -1,32 +1,34 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private GameObject _bloodEffect;
+    public Action<Bullet> onComplete;
+    [SerializeField] private TrailRenderer _trail;
     
     private Vector3 _currentDirection;
-    private float _deathTime;
 
-
-    private void Start()
+    public void Init(float lifeTime)
     {
-        Destroy(gameObject, 1.5f);
+        _trail.Clear();
+        StartCoroutine(LifeRoutine(lifeTime));
+    }
+
+    private IEnumerator LifeRoutine(float lifeTime)
+    {
+        yield return new WaitForSeconds(lifeTime);
+        onComplete?.Invoke(this);
     }
 
     public void SetDirection(Vector3 direction)
     {
         _currentDirection = direction;
-        _deathTime = Time.time + 15f;
     }
 
     private void Update()
     {
         transform.Translate(_currentDirection * 30f * Time.deltaTime, Space.Self);
-
-        //if (Time.time > _deathTime)
-        //{
-        //    Destroy(gameObject);
-        //}
     }
 
     public void OnTriggerEnter(Collider other)
@@ -34,13 +36,18 @@ public class Bullet : MonoBehaviour
         var zombie = other.GetComponent<Zombie>();
 
         if (other.tag == "Border")
-            Destroy(gameObject);
+        {
+            StopAllCoroutines();
+            onComplete?.Invoke(this);
+        }
 
         if (zombie != null)
         {
             zombie.Hit(2);
-            Instantiate(_bloodEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            BulletPull.Inst.GetBloodSplash(transform.position);
+            
+            StopAllCoroutines();
+            onComplete?.Invoke(this);
         }
     }
 }

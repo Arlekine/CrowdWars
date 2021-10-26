@@ -6,6 +6,10 @@ using UnityEngine;
 public class LevelEndTrigger : MonoBehaviour
 {
     public Action onTriggered;
+
+    [Range(0,1)][SerializeField] private float _triggerAmount = 0.5f;
+    
+    private HashSet<Soldier> _triggerdSoldiers = new HashSet<Soldier>();
     
     public void OnTriggerEnter(Collider other)
     {
@@ -13,8 +17,13 @@ public class LevelEndTrigger : MonoBehaviour
 
         if (soldier != null)
         {
-            gameObject.SetActive(false);
-            onTriggered?.Invoke();
+            _triggerdSoldiers.Add(soldier);
+            
+            if (((float) _triggerdSoldiers.Count / (float) soldier.Squad.SquadCount) >= _triggerAmount)
+            {
+                gameObject.SetActive(false);
+                onTriggered?.Invoke();
+            }
         }
     }
 }

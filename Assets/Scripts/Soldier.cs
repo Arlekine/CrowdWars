@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Soldier : MonoBehaviour
 {
@@ -11,14 +12,11 @@ public class Soldier : MonoBehaviour
 
     public SoldiersSquad Squad;
     
-    [SerializeField] private Bullet _bulletPrefab;
-    [SerializeField] private Transform _bulletSpawnPoint;
     [SerializeField] private ParticleSystem _shotFX;
     [SerializeField] private int _damage = 4;
     [SerializeField] private float _attackDistance = 0.5f;
     [SerializeField] private float _attackPause = 0.5f;
     [SerializeField] private int _startHealth = 12;
-    [SerializeField] private LayerMask _targetLayer;
     
     private Collider _collider;
     private Rigidbody _rigidbody;
@@ -26,8 +24,10 @@ public class Soldier : MonoBehaviour
     private Animator _animator;
     private SimpleCharControl _charControl;
     private int _health;
+    private bool _isAttacking;
 
     private float _nextAttackTime;
+    private float _nextUpdateTargetTime;
     
     private void Start()
     {
@@ -50,27 +50,23 @@ public class Soldier : MonoBehaviour
             return _currentTarget.transform.position - transform.position;
         }
     }
-    
-    private void Update()
+
+    public void UpdateTarget(List<Zombie> zombies)
     {
-        _animator.SetBool("IsAttacking", false);
+        bool isAttack = false;
         _charControl.SetRotation = true;
         
-        //if (_currentTarget == null || GetCurrentTargetDistance().magnitude > 10f)
-        if (GetCurrentTargetDistance().magnitude > _attackDistance)
+        float targetDistance;
+
+        if (Time.time > _nextUpdateTargetTime)
         {
-            var colliers = Physics.OverlapSphere(transform.position, 10f, _targetLayer);
-            float currentTargetDistance = float.MaxValue;
-            
-            foreach (var collier in colliers)
+            _nextUpdateTargetTime = Time.time + Random.Range(0.05f, 0.15f);
+            for (int i = 0; i < zombies.Count; i++)
             {
-                var character = collier.GetComponent<Zombie>();
-                if (character != null)
+                targetDistance = (zombies[i].transform.position - transform.position).sqrMagnitude;
+                if (targetDistance < _attackDistance * _attackDistance)
                 {
-                    if (_currentTarget == null || (_currentTarget.transform.position - transform.position).magnitude > (character.transform.position - transform.position).magnitude)
-                    {
-                        _currentTarget = character;
-                    }
+                    _currentTarget = zombies[i];
                 }
             }
         }
@@ -79,12 +75,12 @@ public class Soldier : MonoBehaviour
         {
             Vector3 distanceToTarget = GetCurrentTargetDistance();
 
-            if (distanceToTarget.magnitude < _attackDistance)
+            if (distanceToTarget.sqrMagnitude < _attackDistance * _attackDistance)
             {
-                _animator.SetBool("IsAttacking", true);
+                isAttack = true;
                 _charControl.SetRotation = false;
 
-                if ((transform.forward - (distanceToTarget).normalized).magnitude > _lerpStep)
+                if ((transform.forward - (distanceToTarget).normalized).sqrMagnitude > _lerpStep * _lerpStep)
                 {
                     transform.forward =
                         Vector3.Lerp(transform.forward, (distanceToTarget).normalized, _lerpStep);
@@ -94,7 +90,7 @@ public class Soldier : MonoBehaviour
                     transform.forward = (distanceToTarget).normalized;
                 }
 
-                if ((transform.forward - (distanceToTarget).normalized).magnitude < _lerpStep * 2)
+                if ((transform.forward - (distanceToTarget).normalized).sqrMagnitude < _lerpStep * _lerpStep * 4)
                 {
                     if (Time.time >= _nextAttackTime)
                     {
@@ -108,12 +104,18 @@ public class Soldier : MonoBehaviour
                     Quaternion.Euler(new Vector3(0f, transform.rotation.eulerAngles.y, 0f));
             }
         }
+
+        if (isAttack != _isAttacking)
+        {
+            _isAttacking = isAttack;
+            _animator.SetBool("isAttacking", _isAttacking);
+        }
     }
 
     public void Shoot()
     {
         _shotFX.Play(true);
-        var bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.identity);
+        var bullet = BulletPull.Inst.GetBullet(transform.position);
         bullet.SetDirection(transform.forward);
     }
 

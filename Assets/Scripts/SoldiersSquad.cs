@@ -8,13 +8,17 @@ using Random = UnityEngine.Random;
 public class SoldiersSquad : MonoBehaviour
 {
     public Action onSquadDestroyed;
-    
+
+    public List<Soldier> Soldiers => _chars;
     public Vector3 SquadCenter => GetSquadCenter();
     public int SquadCount => _chars.Count;
-    
+
+    [SerializeField] private LevelEndTrigger _levelEndTrigger;
     [SerializeField] private List<Soldier> _chars = new List<Soldier>();
     [SerializeField] private Soldier _soldierPrefab;
 
+    private bool _isFinal;
+    
     private void Awake()
     {
         foreach (var soldier in _chars)
@@ -22,28 +26,36 @@ public class SoldiersSquad : MonoBehaviour
             soldier.onDead += RemoveSoldier;
             soldier.Squad = this;
         }
+
+        _levelEndTrigger.onTriggered += () => { _isFinal = true;};
     }
 
     private void Update()
     {
         var fingers = LeanTouch.GetFingers(false, false);
 
+        Vector3 moveDirection = new Vector3(0f, 0f, -1f);
+
+        if (_isFinal)
+            moveDirection.z = 0f;
+        
         if (fingers.Count > 0)
         {
             Vector2 fingerDelta = fingers[0].ScreenPosition - fingers[0].StartScreenPosition;
-            Vector3 moveDirection = new Vector3(-fingerDelta.x, 0f, -fingerDelta.y);
-
-            if (moveDirection.magnitude > float.Epsilon)
-            {
-                foreach (var charControl in _chars)
-                {
-                    charControl.Mover.Move(moveDirection.normalized);
-                }
-            }
+            
+            if(_isFinal)
+                moveDirection = new Vector3(-fingerDelta.x, 0f, -fingerDelta.y);
+            else
+                moveDirection.x = -Mathf.Sign(fingerDelta.x);
         }
         
-        if (Input.GetKeyDown(KeyCode.Space))
-            AddSoldiers(50);
+        if (moveDirection.magnitude > float.Epsilon)
+        {
+            foreach (var charControl in _chars)
+            {
+                charControl.Mover.Move(moveDirection.normalized);
+            }
+        }
     }
     
     public void AddSoldiers(int amount)
@@ -126,5 +138,18 @@ public class SoldierComparer : IComparer<Soldier>
         }
         
         return y.transform.position.z.CompareTo(x.transform.position.z);
+    }
+}
+
+public class ZomdiesComparer : IComparer<Zombie>
+{
+    public int Compare(Zombie x, Zombie y)
+    {
+        if (x == null || y == null)
+        {
+            throw new ArgumentException("You can use TitleLastKeyNumberComparer only for Header elements");
+        }
+        
+        return x.transform.position.z.CompareTo(y.transform.position.z);
     }
 }

@@ -132,12 +132,16 @@
         <e p="Scripts" t="Include">
           <e p="BackBlocker.cs" t="Include" />
           <e p="Bullet.cs" t="Include" />
+          <e p="BulletPull.cs" t="Include" />
+          <e p="FPS.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="LevelEndBattle.cs" t="Include" />
           <e p="LevelEndTrigger.cs" t="Include" />
+          <e p="PullObject.cs" t="Include" />
           <e p="Shaker.cs" t="Include" />
           <e p="SimpleCharControl.cs" t="Include" />
           <e p="Soldier.cs" t="Include" />
+          <e p="SoldiersHolder.cs" t="Include" />
           <e p="SoldiersIncreaser.cs" t="Include" />
           <e p="SoldiersIncreaserAdding.cs" t="Include" />
           <e p="SoldiersIncreaserDividing.cs" t="Include" />
@@ -146,6 +150,7 @@
           <e p="SquadFollower.cs" t="Include" />
           <e p="Zombie.cs" t="Include" />
           <e p="ZombieAttackTrigger.cs" t="Include" />
+          <e p="ZombieHolder.cs" t="Include" />
         </e>
         <e p="Simple Toon" t="Include">
           <e p="Shaders" t="Include">

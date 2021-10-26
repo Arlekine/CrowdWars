@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Zombie : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class Zombie : MonoBehaviour
     private int _health;
     
     private Soldier _currentTarget;
+    
+    private float _nextUpdateTargetTime;
     private Collider[] colliers;
 
     private void Start()
@@ -30,34 +33,35 @@ public class Zombie : MonoBehaviour
         _health = _startHealth;
     }
 
-    private void Update()
+    public void UpdateTarget(List<Soldier> soldiers)
     {
-        //if (_currentTarget == null || GetCurrentTargetDistance().magnitude > 10f)
-        if (GetCurrentTargetDistance().magnitude > _attackDistance)
+        float targetDistance;
+
+        if (Time.time > _nextUpdateTargetTime)
         {
-            colliers = Physics.OverlapSphere(transform.position, _enemyDetectionRadious, _targetLayer);
-            float currentTargetDistance = float.MaxValue;
-            Soldier character = null;
-            
-            foreach (var collier in colliers)
+            _nextUpdateTargetTime = Time.time + Random.Range(0.05f, 0.15f);;
+            foreach (var soldier in soldiers)
             {
-                character = collier.GetComponent<Soldier>();
-                if (character != null)
+                targetDistance = (soldier.transform.position - transform.position).sqrMagnitude;
+                if (targetDistance < _enemyDetectionRadious * _enemyDetectionRadious)
                 {
-                    if (_currentTarget == null || (_currentTarget.transform.position - transform.position).magnitude > (character.transform.position - transform.position).magnitude)
+                    if (_currentTarget == null ||
+                        (_currentTarget.transform.position - transform.position).sqrMagnitude >
+                        targetDistance)
                     {
-                        _currentTarget = character;
+                        _currentTarget = soldier;
                     }
                 }
             }
         }
+
 
         if (_currentTarget != null)
         {
             Vector3 distanceToTarget = GetCurrentTargetDistance();
             _animator.SetBool("IsAttacking", false);
 
-            if (distanceToTarget.magnitude > _attackDistance)
+            if (distanceToTarget.sqrMagnitude > _attackDistance*_attackDistance)
             {
                 _SimpleCharControl.Move((distanceToTarget).normalized);
             }
@@ -66,7 +70,7 @@ public class Zombie : MonoBehaviour
                 _animator.SetBool("IsAttacking", true);
                 
         
-                if ((transform.forward - (distanceToTarget).normalized).magnitude > _lerpStep)
+                if ((transform.forward - (distanceToTarget).normalized).sqrMagnitude > _lerpStep * _lerpStep)
                     transform.forward = Vector3.Lerp(transform.forward, (distanceToTarget).normalized, _lerpStep);
                 else
                     transform.forward = (distanceToTarget).normalized;
@@ -80,8 +84,7 @@ public class Zombie : MonoBehaviour
             _animator.SetBool("IsAttacking", false);
         }
     }
-    
-    
+
     private float _lerpStep = 0.1f;
 
     private Vector3 GetCurrentTargetDistance()
@@ -123,5 +126,9 @@ public class Zombie : MonoBehaviour
         Destroy(this);
     }
 
-
+    public void SetActive(bool isActive)
+    {
+        _animator.enabled = isActive;
+        _rigidbody.isKinematic = !isActive;
+    }
 }

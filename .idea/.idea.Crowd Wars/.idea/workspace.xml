@@ -3,9 +3,30 @@
   <component name="ChangeListManager">
     <list default="true" id="ad3a436f-35fb-4b8d-a117-9330ab1cfd4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Units/Soldier/Solder_Death.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Units/Soldier/Solder_Death.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Units/Soldier/Solder_Idle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Units/Soldier/Solder_Idle.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Units/Soldier/Solder_Run.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Units/Soldier/Solder_Run.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Units/Soldier/rifle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Units/Soldier/rifle.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Units/Zombie/Zombie Idle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Units/Zombie/Zombie Idle.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Content/Units/Zombie/Zombie Running.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Units/Zombie/Zombie Running.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/ImportedAssets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/ImportedAssets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/FX/GreenBloodExplosionSpikyAnimated.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/FX/GreenBloodExplosionSpikyAnimated.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Soldier.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Soldier.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelEndTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelEndTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SimpleCharControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SimpleCharControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SquadFollower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SquadFollower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombie.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,14 +37,25 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoldiersHolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PullObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelEndTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletPull.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZombieHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZombieAttackTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoldiersIncreaser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombie.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/19391519-2608-4240-8FF9-93819E8AFDF3/86/3abd0658/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoldiersIncreaserAdding.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Soldier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SquadFollower.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shaker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FPS.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SimpleCharControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/VerticalFog/Scripts/DepthTexture.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -45,10 +77,18 @@
         <option value="$PROJECT_DIR$/Assets/SquadFollower.cs" />
         <option value="$PROJECT_DIR$/Assets/BackBlocker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ZombieAttackTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Zombie.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SquadFollower.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoldiersIncreaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shaker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FPS.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SquadFollower.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelEndTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletPull.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SimpleCharControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SoldiersHolder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ZombieHolder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Zombie.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" />
       </list>
     </option>
@@ -99,7 +139,9 @@
       <updated>1634151732846</updated>
       <workItem from="1634151736173" duration="480000" />
       <workItem from="1634401014027" duration="16008000" />
-      <workItem from="1634919056141" duration="23562000" />
+      <workItem from="1634919056141" duration="24159000" />
+      <workItem from="1635176678097" duration="1950000" />
+      <workItem from="1635267135929" duration="15917000" />
     </task>
     <servers />
   </component>
@@ -108,6 +150,27 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state width="2517" height="492" key="GridCell.Tab.0.bottom" timestamp="1634845566171">
       <screen x="0" y="0" width="2560" height="1400" />

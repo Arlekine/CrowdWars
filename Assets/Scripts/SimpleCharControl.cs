@@ -17,12 +17,14 @@ public class SimpleCharControl : MonoBehaviour
     private Vector3 _prevPosition;
     private float _lerpStep = 0.1f;
     public bool _isDead;
+    public bool _isMoving;
     
     private void Start()
     {
         _CharacterController = GetComponent<Rigidbody>();
         _Animator = GetComponentInChildren<Animator>();
-        _initialRotation = _CharacterController.rotation;_prevPosition = _CharacterController.position;
+        _initialRotation = _CharacterController.rotation;
+        _prevPosition = _CharacterController.position;
     }
 
     private void LateUpdate()
@@ -32,15 +34,22 @@ public class SimpleCharControl : MonoBehaviour
         _CharacterController.velocity = Vector3.zero;
         _CharacterController.angularVelocity = Vector3.zero;
         
-        _Animator.SetBool("Move", false);
+        if (_isMoving)
+            _isMoving = false;
+        else
+            _Animator.SetBool("Move", false);
     }
 
     public void Move(Vector3 direction)
     {
         if (_isDead)
             return;
-        
-        _Animator.SetBool("Move", true);
+
+        if (!_isMoving)
+        {
+            _isMoving = true;
+            _Animator.SetBool("Move", true);
+        }
 
         if (SetRotation)
         {
@@ -50,6 +59,6 @@ public class SimpleCharControl : MonoBehaviour
                 transform.forward = direction;
         }
 
-        _CharacterController.MovePosition(_CharacterController.position + direction * _moveSpeed * Random.Range(0.95f, 1.05f) * Time.deltaTime);
+        _CharacterController.MovePosition(_CharacterController.position + direction * (_moveSpeed * Random.Range(0.95f, 1.05f) * Time.deltaTime));
     }
 }
