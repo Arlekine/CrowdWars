@@ -7,7 +7,8 @@ using Random = UnityEngine.Random;
 public class Zombie : MonoBehaviour
 {
     public Action<Zombie> onDead;
-    
+
+    [SerializeField] private float _moveSpeed = 6f;
     [SerializeField] private SimpleCharControl _SimpleCharControl;
     [SerializeField] private Animator _animator;
     [SerializeField] private float _enemyDetectionRadious = 10f;
@@ -63,7 +64,7 @@ public class Zombie : MonoBehaviour
 
             if (distanceToTarget.sqrMagnitude > _attackDistance*_attackDistance)
             {
-                _SimpleCharControl.Move((distanceToTarget).normalized);
+                _SimpleCharControl.Move((distanceToTarget).normalized * (_moveSpeed * Time.deltaTime));
             }
             else
             {

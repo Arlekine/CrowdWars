@@ -13,6 +13,8 @@ public class SoldiersSquad : MonoBehaviour
     public Vector3 SquadCenter => GetSquadCenter();
     public int SquadCount => _chars.Count;
 
+    [SerializeField] private float _horizontalControlSpeed;
+    [SerializeField] private float moveSpeed;
     [SerializeField] private LevelEndTrigger _levelEndTrigger;
     [SerializeField] private List<Soldier> _chars = new List<Soldier>();
     [SerializeField] private Soldier _soldierPrefab;
@@ -34,7 +36,7 @@ public class SoldiersSquad : MonoBehaviour
     {
         var fingers = LeanTouch.GetFingers(false, false);
 
-        Vector3 moveDirection = new Vector3(0f, 0f, -1f);
+        Vector3 moveDirection = new Vector3(0f, 0f, -moveSpeed * Time.deltaTime);
 
         if (_isFinal)
             moveDirection.z = 0f;
@@ -44,16 +46,16 @@ public class SoldiersSquad : MonoBehaviour
             Vector2 fingerDelta = fingers[0].ScreenPosition - fingers[0].StartScreenPosition;
             
             if(_isFinal)
-                moveDirection = new Vector3(-fingerDelta.x, 0f, -fingerDelta.y);
+                moveDirection = new Vector3(-Mathf.Sign(fingerDelta.x) * moveSpeed * Time.deltaTime, 0f, -Mathf.Sign(fingerDelta.y) * moveSpeed * Time.deltaTime);
             else
-                moveDirection.x = -Mathf.Sign(fingerDelta.x);
+                moveDirection.x = -(Mathf.Sign(fingerDelta.x) * _horizontalControlSpeed * Time.deltaTime);
         }
         
         if (moveDirection.magnitude > float.Epsilon)
         {
             foreach (var charControl in _chars)
             {
-                charControl.Mover.Move(moveDirection.normalized);
+                charControl.Mover.Move(moveDirection);
             }
         }
     }

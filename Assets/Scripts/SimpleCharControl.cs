@@ -8,8 +8,6 @@ public class SimpleCharControl : MonoBehaviour
 {
     public bool SetRotation;
     
-    [SerializeField] private float _moveSpeed;
-
     private Rigidbody _CharacterController;
     private Animator _Animator;
     private Quaternion _initialRotation;
@@ -53,12 +51,12 @@ public class SimpleCharControl : MonoBehaviour
 
         if (SetRotation)
         {
-            if ((transform.forward - direction).magnitude > _lerpStep)
-                transform.forward = Vector3.Lerp(transform.forward, direction, _lerpStep);
+            if ((transform.forward - direction.normalized).magnitude > _lerpStep)
+                transform.forward = Vector3.Lerp(transform.forward, direction.normalized, _lerpStep);
             else
-                transform.forward = direction;
+                transform.forward = direction.normalized;
         }
 
-        _CharacterController.MovePosition(_CharacterController.position + direction * (_moveSpeed * Random.Range(0.95f, 1.05f) * Time.deltaTime));
+        _CharacterController.MovePosition(_CharacterController.position + direction);
     }
 }
