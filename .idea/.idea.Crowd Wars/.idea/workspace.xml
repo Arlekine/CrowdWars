@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad3a436f-35fb-4b8d-a117-9330ab1cfd4d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Units/Soldier/Solder_Idle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Units/Soldier/Solder_Idle.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Units/Soldier/rifle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Units/Soldier/rifle.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Content/Units/Zombie/Zombie Idle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Content/Units/Zombie/Zombie Idle.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SimpleCharControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SimpleCharControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Zombie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Zombie.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
@@ -74,10 +68,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoldiersHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ZombieHolder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SimpleCharControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Zombie.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" />
       </list>
     </option>
   </component>
@@ -129,7 +123,7 @@
       <workItem from="1634401014027" duration="16008000" />
       <workItem from="1634919056141" duration="24159000" />
       <workItem from="1635176678097" duration="1950000" />
-      <workItem from="1635267135929" duration="17106000" />
+      <workItem from="1635267135929" duration="18163000" />
     </task>
     <servers />
   </component>

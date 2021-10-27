@@ -15,6 +15,7 @@ public class SoldiersSquad : MonoBehaviour
 
     [SerializeField] private float _horizontalControlSpeed;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float _screenMinDelta;
     [SerializeField] private LevelEndTrigger _levelEndTrigger;
     [SerializeField] private List<Soldier> _chars = new List<Soldier>();
     [SerializeField] private Soldier _soldierPrefab;
@@ -43,12 +44,21 @@ public class SoldiersSquad : MonoBehaviour
         
         if (fingers.Count > 0)
         {
-            Vector2 fingerDelta = fingers[0].ScreenPosition - fingers[0].StartScreenPosition;
-            
+            Vector2 fingerDelta;
+
+            if (_isFinal)
+                fingerDelta = fingers[0].ScreenPosition - fingers[0].StartScreenPosition;
+            else
+            {
+                fingerDelta = fingers[0].ScreenDelta;
+            }
+
             if(_isFinal)
                 moveDirection = new Vector3(-Mathf.Sign(fingerDelta.x) * moveSpeed * Time.deltaTime, 0f, -Mathf.Sign(fingerDelta.y) * moveSpeed * Time.deltaTime);
             else
-                moveDirection.x = -(Mathf.Sign(fingerDelta.x) * _horizontalControlSpeed * Time.deltaTime);
+            {
+                moveDirection.x = -(fingerDelta.normalized.x * _horizontalControlSpeed * Time.deltaTime);
+            }
         }
         
         if (moveDirection.magnitude > float.Epsilon)

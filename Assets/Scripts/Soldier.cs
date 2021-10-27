@@ -108,7 +108,7 @@ public class Soldier : MonoBehaviour
         if (isAttack != _isAttacking)
         {
             _isAttacking = isAttack;
-            _animator.SetBool("isAttacking", _isAttacking);
+            _animator.SetBool("IsAttacking", _isAttacking);
         }
     }
 

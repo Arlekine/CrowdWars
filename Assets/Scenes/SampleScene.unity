@@ -12438,8 +12438,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87c74632a245a1d4098d7cd1a58cf62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _horizontalControlSpeed: 12
+  _horizontalControlSpeed: 15
   moveSpeed: 6
+  _screenMinDelta: 10
   _levelEndTrigger: {fileID: 1149272930}
   _chars:
   - {fileID: 329459819}
