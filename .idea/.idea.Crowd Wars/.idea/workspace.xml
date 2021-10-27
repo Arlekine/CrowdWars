@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad3a436f-35fb-4b8d-a117-9330ab1cfd4d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
@@ -21,10 +22,13 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoldiersHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PullObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelEndTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletPull.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UniqueObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZombieHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ZombieAttackTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ResultPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoldiersIncreaser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zombie.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/19391519-2608-4240-8FF9-93819E8AFDF3/86/3abd0658/Rigidbody.cs" root0="SKIP_HIGHLIGHTING" />
@@ -70,8 +74,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/ZombieHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SimpleCharControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Zombie.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DontDestroyOnLoad.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UniqueObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ResultPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" />
       </list>
     </option>
   </component>
@@ -123,7 +132,7 @@
       <workItem from="1634401014027" duration="16008000" />
       <workItem from="1634919056141" duration="24159000" />
       <workItem from="1635176678097" duration="1950000" />
-      <workItem from="1635267135929" duration="18163000" />
+      <workItem from="1635267135929" duration="23290000" />
     </task>
     <servers />
   </component>
@@ -218,6 +227,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="2517" height="492" key="GridCell.Tab.3.right/0.0.2560.1400@0.0.2560.1400" timestamp="1634845566172" />
+    <state x="1013" y="424" key="RiderGenerateDialog" timestamp="1635326397462">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1013" y="424" key="RiderGenerateDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1635326397462" />
     <state x="937" y="331" key="run.anything.popup" timestamp="1634937633570">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

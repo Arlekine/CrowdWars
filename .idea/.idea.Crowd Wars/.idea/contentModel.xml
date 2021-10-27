@@ -135,9 +135,11 @@
           <e p="BulletPull.cs" t="Include" />
           <e p="FPS.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
+          <e p="Level.cs" t="Include" />
           <e p="LevelEndBattle.cs" t="Include" />
           <e p="LevelEndTrigger.cs" t="Include" />
           <e p="PullObject.cs" t="Include" />
+          <e p="ResultPanel.cs" t="Include" />
           <e p="Shaker.cs" t="Include" />
           <e p="SimpleCharControl.cs" t="Include" />
           <e p="Soldier.cs" t="Include" />
@@ -148,6 +150,7 @@
           <e p="SoldiersIncreaserMultiplying.cs" t="Include" />
           <e p="SoldiersSquad.cs" t="Include" />
           <e p="SquadFollower.cs" t="Include" />
+          <e p="UniqueObject.cs" t="Include" />
           <e p="Zombie.cs" t="Include" />
           <e p="ZombieAttackTrigger.cs" t="Include" />
           <e p="ZombieHolder.cs" t="Include" />

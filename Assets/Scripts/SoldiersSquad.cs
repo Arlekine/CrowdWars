@@ -15,7 +15,8 @@ public class SoldiersSquad : MonoBehaviour
 
     [SerializeField] private float _horizontalControlSpeed;
     [SerializeField] private float moveSpeed;
-    [SerializeField] private float _screenMinDelta;
+    [SerializeField] private float _joystickMaxMagnitude;
+    [SerializeField] private float _joystickMagnitudeOffset;
     [SerializeField] private LevelEndTrigger _levelEndTrigger;
     [SerializeField] private List<Soldier> _chars = new List<Soldier>();
     [SerializeField] private Soldier _soldierPrefab;
@@ -36,7 +37,6 @@ public class SoldiersSquad : MonoBehaviour
     private void Update()
     {
         var fingers = LeanTouch.GetFingers(false, false);
-
         Vector3 moveDirection = new Vector3(0f, 0f, -moveSpeed * Time.deltaTime);
 
         if (_isFinal)
@@ -53,8 +53,14 @@ public class SoldiersSquad : MonoBehaviour
                 fingerDelta = fingers[0].ScreenDelta;
             }
 
-            if(_isFinal)
-                moveDirection = new Vector3(-Mathf.Sign(fingerDelta.x) * moveSpeed * Time.deltaTime, 0f, -Mathf.Sign(fingerDelta.y) * moveSpeed * Time.deltaTime);
+            if (_isFinal)
+            {
+                moveDirection = new Vector3(-fingerDelta.x, 0f, -fingerDelta.y);
+                moveDirection.Scale(Vector3.one*_joystickMagnitudeOffset);
+                moveDirection = Vector3.ClampMagnitude(moveDirection, _joystickMaxMagnitude);
+
+                moveDirection = moveDirection * (moveSpeed * Time.deltaTime);
+            }
             else
             {
                 moveDirection.x = -(fingerDelta.normalized.x * _horizontalControlSpeed * Time.deltaTime);
