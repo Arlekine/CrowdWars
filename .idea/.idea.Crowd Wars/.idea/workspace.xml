@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad3a436f-35fb-4b8d-a117-9330ab1cfd4d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Crowd Wars/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Levels/LEVEL_0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Levels/LEVEL_0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelEndTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelEndTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SquadFollower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SquadFollower.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,21 +65,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SoldiersIncreaser.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shaker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FPS.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SquadFollower.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/LevelEndTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BulletPull.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoldiersHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ZombieHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SimpleCharControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Zombie.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DontDestroyOnLoad.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UniqueObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Level.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ResultPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoldiersSquad.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Soldier.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LevelEndTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SquadFollower.cs" />
       </list>
     </option>
   </component>
@@ -132,7 +131,7 @@
       <workItem from="1634401014027" duration="16008000" />
       <workItem from="1634919056141" duration="24159000" />
       <workItem from="1635176678097" duration="1950000" />
-      <workItem from="1635267135929" duration="23290000" />
+      <workItem from="1635267135929" duration="26715000" />
     </task>
     <servers />
   </component>

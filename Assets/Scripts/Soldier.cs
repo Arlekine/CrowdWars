@@ -136,4 +136,12 @@ public class Soldier : MonoBehaviour
         onDead?.Invoke(this);
         Destroy(this);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.collider.tag == "OutOfBounds")
+        {
+            transform.position = Squad.SquadCenter;
+        }
+    }
 }

@@ -10,6 +10,8 @@ public class LevelEndTrigger : MonoBehaviour
     [Range(0,1)][SerializeField] private float _triggerAmount = 0.5f;
     
     private HashSet<Soldier> _triggerdSoldiers = new HashSet<Soldier>();
+
+    private bool _isTriggered;
     
     public void OnTriggerEnter(Collider other)
     {
@@ -18,10 +20,22 @@ public class LevelEndTrigger : MonoBehaviour
         if (soldier != null)
         {
             _triggerdSoldiers.Add(soldier);
-            
-            if (((float) _triggerdSoldiers.Count / (float) soldier.Squad.SquadCount) >= _triggerAmount)
+            StopAllCoroutines();
+            StartCoroutine(CheckTrigger(soldier));
+        }
+    }
+
+    private IEnumerator CheckTrigger(Soldier soldier)
+    {
+        yield return null;
+        
+        if (((float) _triggerdSoldiers.Count / (float) soldier.Squad.SquadCount) >= _triggerAmount)
+        {
+            gameObject.SetActive(false);
+
+            if (!_isTriggered)
             {
-                gameObject.SetActive(false);
+                _isTriggered = true;
                 onTriggered?.Invoke();
             }
         }

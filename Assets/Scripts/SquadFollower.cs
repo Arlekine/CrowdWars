@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
    
    public class SquadFollower : MonoBehaviour
    {
@@ -17,7 +18,8 @@
 
        private Vector3 _positionOffsetDirection;
        private Vector3 _targetPos;
-
+       private float _targetDistance;
+       private float _distance;
 
     private void Awake()
     {
@@ -29,17 +31,19 @@
        {
            _positionOffsetDirection = _camera.transform.position - _squad.SquadCenter;
            _positionOffsetDirection = _positionOffsetDirection.normalized;
-           _LevelEndTrigger.onTriggered += () => { IsFinal = true; };
+           _LevelEndTrigger.onTriggered += () => { StartCoroutine(FinalizeCamera()); };
        }
    
        private void FixedUpdate()
        {
            var squadCenter = _squad.SquadCenter;
-           float distance = Mathf.Lerp(_distanceA, _distanceB, IsFinal ? 1f : ((float)_squad.SquadCount - 30f)/ 330f);
+            _targetDistance = Mathf.Lerp(_distanceA, _distanceB, IsFinal ? 1f : ((float)_squad.SquadCount - 30f)/ 330f);
+            _distance = Mathf.Lerp(_distance, _targetDistance, (_cameraSpeed * Time.deltaTime));
+           
 
            if (squadCenter != Vector3.negativeInfinity)
            {
-               _targetPos = _squad.SquadCenter + ( !IsFinal ? _positionOffsetDirection : _lastArevaOffset.normalized) * distance;
+               _targetPos = _squad.SquadCenter + ( !IsFinal ? _positionOffsetDirection : _lastArevaOffset.normalized) * _distance;
 
                if (IsFinal)
                {
@@ -57,5 +61,11 @@
                else
                    _camera.transform.position = Vector3.Lerp(_camera.transform.position, _targetPos, (_cameraSpeed * Time.deltaTime));
            }
+       }
+
+       private IEnumerator FinalizeCamera()
+       {
+           yield return new WaitForSeconds(0.3f);
+           IsFinal = true; 
        }
    }
